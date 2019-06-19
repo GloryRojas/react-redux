@@ -4,16 +4,18 @@ import Page from './page';
 
 class Results extends Component {
     render() {
-        const { suggestions } = this.props;
+        const { results } = this.props;
         return(
-            <Page />
+            <Page 
+                results={results}
+            />
         );
     }
 }
 
 const mapStateToProps = (state) => {
     return {
-        suggestions: state.suggestions,
+        results: state.results,
     }
 };
 
