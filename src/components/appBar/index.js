@@ -20,11 +20,20 @@ class AppBar extends Component {
         this.props.findSuggestions(text);
     }
 
-    onChangeSelection(text) {
+    onChangeSelection(text) {        
+        const {
+            findResults,
+            match,
+            history,
+        } = this.props;
+
         this.setState({ text });
 
-        this.props.findResults(text);
-        this.props.history.push('/results');
+        findResults(text);
+
+        if (match.path !== '/results') {
+            history.push('/results');
+        }
     }
 
     render() {
