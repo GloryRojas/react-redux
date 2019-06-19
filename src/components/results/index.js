@@ -5,8 +5,6 @@ import Page from './page';
 class Results extends Component {
     render() {
         const { suggestions } = this.props;
-
-        console.log(suggestions);
         return(
             <Page />
         );

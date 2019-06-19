@@ -1,9 +1,12 @@
 import React, { Fragment } from 'react';
+import CssBaseLine from "@material-ui/core/CssBaseline";
+import AppBar from "../appBar";
 
 const Page = (props) => {
     return (
         <Fragment>
-            Results
+            <CssBaseLine />
+            <AppBar />
         </Fragment>
     );
 };
