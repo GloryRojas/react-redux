@@ -4,15 +4,27 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Autocomplete from '../autocomplete';
+import './styles.css';
 
 const Page = (props) => {
+    const {
+        text,
+        suggestions,
+        onChangeSelection,
+        onChangeText
+    } = props;
     return (
         <AppBar position="static">
             <Toolbar className="appbar">
                 <Typography variant="h6" color="inherit">
                     Programax
                 </Typography>
-                <Autocomplete />
+                <Autocomplete
+                    text={text}
+                    suggestions={suggestions}
+                    onChangeText={onChangeText}
+                    onChangeSelection={onChangeSelection}
+                />
                 <AccountCircle />
             </Toolbar>
         </AppBar>
